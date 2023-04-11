@@ -160,7 +160,7 @@ nav .links a{
 }
 
 nav .links a:hover{
-  color: pink;
+  color: rgb(162, 162, 162);
 }
 
 #home-link:hover{
