@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+/* Basic Bootstrap CSS
+modified to make sense 
+by Ms. St Don */
+
+
+
+/* Default Variables 
+You can change these colors to what you want
+And use in CSS using the var() value.
+*/
+
+@font-face {
+  font-family: "Futura";
+  src: url(fonts/Futura-Book-Font/FUTURA.ttf);
+}
+
+:root {
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+}
+
+
+  
+/* Layout CSS 
+such as your body, main,
+header, nav, etc. */
+
+@keyframes fadein{
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+html{
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  animation: fadein 1s;
+  overflow-x: hidden;
+  color: white;
+  position: static;
+}
+
+body{
+  font-family: "futura-pt", sans-serif;
+  color: white;
+  background: #0a0b0c;
+  position: relative;
+}
+
+nav {
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0,0,0, 0));
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.lightfall {
+  position: relative;
+  background-image: url(images/lightfall.jpg);
+  left: -15px;
+  z-index: -999999;
+} 
+
+.lf-story{
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+
+.st1{
+  fill:whitesmoke;
+  stroke: #16ac53;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0,0,0,0));
+  position: absolute;
+  bottom: -0.5%;
+}
+
+
+/* Text Formatting
+such as your a, headings,
+paragraphs, etc. */
+
+.head {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgb(77, 77, 77);
+  font-size: 3.5em;
+  text-shadow: 2px 2px 10px rgb(162, 162, 162, .5);
+}
+
+#home{
+  color: #16ac53;
+}
+
+a{
+  text-decoration: none;
+}
+
+p {
+  font-size: var(--bs-body-font-size);
+  color: var(--bs-light);
+}
+
+nav .links a{
+  display: inline;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+nav .links a:hover{
+  color: pink;
+}
+
+#home-link:hover{
+  color: #16ac53;
+}
+
+.lightfallcta {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 4em;
+  left: 40%;
+  text-shadow: 5px 5px 10px #16ac53;
+  -webkit-text-stroke: #16ac53 1px;
+  top: 50%;
+}
+
+#lf-indexhead{
+  font-size: 9em;
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+
+.lf-indexsubhead{
+  margin-left: 5%;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 10%;
+}
+
+.divider{
+  background-color: #16ac53;
+  height: 20px;
+  width: 25%;
+  content: '';
+  margin: 5%;
+}
+
+.lf-summary{
+  width: 50%;
+  font-size: 3em;
+  margin: 10px;
+  text-align: right;
+  margin-top: 15%;
+  text-shadow:2px 2px rgb(77, 77, 77);
+}
+
+.witnessvidbg{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 110%;
+  transform: translateX(-50%);
+  z-index: -999999;
+}
+
+#strandindex{
+  position: relative;
+  width: 100%;
+  left: -15px;
+  z-index: -999999;
+  scale: 105%;
+}
+
+/* Break Points */
+
+
+ /* small */
+ @media screen and (min-width: 576px) { 
+
+
+}
+
+ /* medium */
+ @media screen and (min-width: 768px) { 
+
+}
+
+ /* large */
+ @media screen and (min-width: 992px) { 
+
+
+}
+
+ /* xl */
+ @media screen and (min-width: 1200px) { 
+
+
+
+}
+
+/* xxl large */
+@media screen and (min-width: 1400px){
+
+}
